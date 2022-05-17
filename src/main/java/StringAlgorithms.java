@@ -16,8 +16,27 @@ public class StringAlgorithms {
         System.out.println(reverseTwo("string algorithms")); // make string reversed using build-in operation
         System.out.println(individualReverse("Cheeky cheeky la la boom boom cha cha cha"));
         // make each word reversed
+        System.out.println(spinWords("Hey my name is fellow warrior"));
     }
 
+
+
+
+    public static String spinWords(String sentence) {
+        if(sentence == null || sentence.isEmpty()) {
+            return sentence;
+        }
+        StringBuilder reversed = new StringBuilder();
+        String[] splitSentence = sentence.split(" ");
+        for (String word : splitSentence) {
+            if (word.length() > 4) {
+                reversed.append(new StringBuilder(word).reverse()).append(" ");
+            } else {
+                reversed.append(word).append(" ");
+            }
+        }
+        return reversed.toString().trim();
+    }
 
     public static String individualReverse(String s) {
         if(s == null || s.isEmpty()) {

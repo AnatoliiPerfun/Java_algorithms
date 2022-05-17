@@ -25,9 +25,18 @@ public class ArrayAlgorithms {
         out.println();
         rotateArrayLeft(array);
         Arrays.stream(array).forEach(out::println);
+        out.println(findIt(array));
     }
 
 
+    public static int findIt(int[] array) {
+        int odd = array[0];
+        int length = array.length;
+        for (int i = 1; i < length; i++) {
+            odd ^= array[i];
+        }
+        return odd;
+    }
     public static void rotateArrayLeft(int[] array) {
         int temp = array[0];
         for (int i = 0; i < array.length - 1; i++) {
