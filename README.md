@@ -1,6 +1,6 @@
 # Java_algorithms
 ## java beginner algorithms course
-includes : 
+include :
 ### String
 ### Array
 ### Linked (Queue)
